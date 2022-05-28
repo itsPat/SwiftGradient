@@ -13,6 +13,15 @@
 		181400CF28426BD1009B0D39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181400CD28426BD1009B0D39 /* Main.storyboard */; };
 		181400D128426BD2009B0D39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 181400D028426BD2009B0D39 /* Assets.xcassets */; };
 		181400D428426BD2009B0D39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181400D228426BD2009B0D39 /* LaunchScreen.storyboard */; };
+		181400DD28426BEC009B0D39 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181400DC28426BEC009B0D39 /* Gradient.swift */; };
+		181400DF28426BF3009B0D39 /* GradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181400DE28426BF3009B0D39 /* GradientLayer.swift */; };
+		181400E128426BFD009B0D39 /* GradientRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181400E028426BFD009B0D39 /* GradientRenderer.swift */; };
+		181400E328426C07009B0D39 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181400E228426C07009B0D39 /* GradientView.swift */; };
+		181400E628426C42009B0D39 /* axial.metal in Sources */ = {isa = PBXBuildFile; fileRef = 181400E528426C42009B0D39 /* axial.metal */; };
+		181400E828426C5D009B0D39 /* radial.metal in Sources */ = {isa = PBXBuildFile; fileRef = 181400E728426C5D009B0D39 /* radial.metal */; };
+		181400EA28426C8D009B0D39 /* shared.metal in Sources */ = {isa = PBXBuildFile; fileRef = 181400E928426C8D009B0D39 /* shared.metal */; };
+		181400EC28426CA2009B0D39 /* spiral.metal in Sources */ = {isa = PBXBuildFile; fileRef = 181400EB28426CA2009B0D39 /* spiral.metal */; };
+		181400EE28426CB4009B0D39 /* sweep.metal in Sources */ = {isa = PBXBuildFile; fileRef = 181400ED28426CB4009B0D39 /* sweep.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +33,15 @@
 		181400D028426BD2009B0D39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		181400D328426BD2009B0D39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		181400D528426BD2009B0D39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		181400DC28426BEC009B0D39 /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
+		181400DE28426BF3009B0D39 /* GradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLayer.swift; sourceTree = "<group>"; };
+		181400E028426BFD009B0D39 /* GradientRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientRenderer.swift; sourceTree = "<group>"; };
+		181400E228426C07009B0D39 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		181400E528426C42009B0D39 /* axial.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = axial.metal; sourceTree = "<group>"; };
+		181400E728426C5D009B0D39 /* radial.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = radial.metal; sourceTree = "<group>"; };
+		181400E928426C8D009B0D39 /* shared.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = shared.metal; sourceTree = "<group>"; };
+		181400EB28426CA2009B0D39 /* spiral.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = spiral.metal; sourceTree = "<group>"; };
+		181400ED28426CB4009B0D39 /* sweep.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = sweep.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,7 @@
 		181400C628426BD1009B0D39 /* SwiftGradient */ = {
 			isa = PBXGroup;
 			children = (
+				181400DB28426BDD009B0D39 /* SwiftGradient */,
 				181400C728426BD1009B0D39 /* AppDelegate.swift */,
 				181400C928426BD1009B0D39 /* SceneDelegate.swift */,
 				181400CB28426BD1009B0D39 /* ViewController.swift */,
@@ -65,6 +84,30 @@
 				181400D528426BD2009B0D39 /* Info.plist */,
 			);
 			path = SwiftGradient;
+			sourceTree = "<group>";
+		};
+		181400DB28426BDD009B0D39 /* SwiftGradient */ = {
+			isa = PBXGroup;
+			children = (
+				181400E428426C27009B0D39 /* Shaders */,
+				181400DC28426BEC009B0D39 /* Gradient.swift */,
+				181400DE28426BF3009B0D39 /* GradientLayer.swift */,
+				181400E028426BFD009B0D39 /* GradientRenderer.swift */,
+				181400E228426C07009B0D39 /* GradientView.swift */,
+			);
+			name = SwiftGradient;
+			sourceTree = "<group>";
+		};
+		181400E428426C27009B0D39 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				181400E528426C42009B0D39 /* axial.metal */,
+				181400E728426C5D009B0D39 /* radial.metal */,
+				181400E928426C8D009B0D39 /* shared.metal */,
+				181400EB28426CA2009B0D39 /* spiral.metal */,
+				181400ED28426CB4009B0D39 /* sweep.metal */,
+			);
+			name = Shaders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +181,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181400EA28426C8D009B0D39 /* shared.metal in Sources */,
 				181400CC28426BD1009B0D39 /* ViewController.swift in Sources */,
+				181400DF28426BF3009B0D39 /* GradientLayer.swift in Sources */,
+				181400E128426BFD009B0D39 /* GradientRenderer.swift in Sources */,
+				181400E828426C5D009B0D39 /* radial.metal in Sources */,
+				181400E628426C42009B0D39 /* axial.metal in Sources */,
+				181400EE28426CB4009B0D39 /* sweep.metal in Sources */,
 				181400C828426BD1009B0D39 /* AppDelegate.swift in Sources */,
+				181400E328426C07009B0D39 /* GradientView.swift in Sources */,
 				181400CA28426BD1009B0D39 /* SceneDelegate.swift in Sources */,
+				181400EC28426CA2009B0D39 /* spiral.metal in Sources */,
+				181400DD28426BEC009B0D39 /* Gradient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
